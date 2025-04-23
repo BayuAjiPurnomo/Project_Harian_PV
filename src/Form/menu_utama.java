@@ -31,8 +31,9 @@ public class menu_utama extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        m_kasir = new javax.swing.JMenuItem();
         m_pelanggan = new javax.swing.JMenuItem();
+        m_kasir = new javax.swing.JMenuItem();
+        m_barang = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -43,6 +44,15 @@ public class menu_utama extends javax.swing.JFrame {
         jMenu1.setText("Master");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
+        m_pelanggan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        m_pelanggan.setText("Pelanggan");
+        m_pelanggan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                m_pelangganActionPerformed(evt);
+            }
+        });
+        jMenu1.add(m_pelanggan);
+
         m_kasir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         m_kasir.setText("Kasir");
         m_kasir.addActionListener(new java.awt.event.ActionListener() {
@@ -52,14 +62,14 @@ public class menu_utama extends javax.swing.JFrame {
         });
         jMenu1.add(m_kasir);
 
-        m_pelanggan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        m_pelanggan.setText("Pelanggan");
-        m_pelanggan.addActionListener(new java.awt.event.ActionListener() {
+        m_barang.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        m_barang.setText("Barang");
+        m_barang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                m_pelangganActionPerformed(evt);
+                m_barangActionPerformed(evt);
             }
         });
-        jMenu1.add(m_pelanggan);
+        jMenu1.add(m_barang);
 
         jMenuBar1.add(jMenu1);
 
@@ -90,6 +100,13 @@ public class menu_utama extends javax.swing.JFrame {
         mk.setVisible(true);
         mk.setLocationRelativeTo(null);
     }//GEN-LAST:event_m_kasirActionPerformed
+
+    private void m_barangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m_barangActionPerformed
+        // TODO add your handling code here:
+        master_barang mb = new master_barang();
+        mb.setVisible(true);
+        mb.setLocationRelativeTo(null);
+    }//GEN-LAST:event_m_barangActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,6 +149,7 @@ public class menu_utama extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem m_barang;
     private javax.swing.JMenuItem m_kasir;
     private javax.swing.JMenuItem m_pelanggan;
     // End of variables declaration//GEN-END:variables
